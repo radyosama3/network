@@ -75,14 +75,17 @@
                             <a class="nav-link active" href="{{route('login')}}">تسجيل دخول</a>
                         </li>
                     @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                تسجيل خروج
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            تسجيل خروج
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active text-decoration-underline">{{ ucwords(Auth::user()->name) }}</a>
+                    </li>
                     @endguest
                 </ul>
             </div>

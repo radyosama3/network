@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
@@ -19,14 +20,14 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:4', // تم التعديل ليطابق طول الاسم في الجدول
+            'name' => 'required|string|min:4|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
             'phone_number' => 'required|string|max:20',
             'address' => 'required|string',
-            'file' => 'nullable|file|mimes:jpeg,png,pdf|max:2048', // مثال للتحقق من نوع وحجم الملف
+            'file' => 'nullable|file|mimes:jpeg,png,pdf|max:2048',
             'gender' => 'required|in:male,female',
-            'national_id' => 'required|string|unique:users',
+            'national_id' => 'required|numeric|unique:users',
         ]);
 
         if ($validator->fails()) {

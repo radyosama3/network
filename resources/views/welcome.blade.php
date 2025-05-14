@@ -14,23 +14,34 @@
     <section class="py-5 text-center">
         <div class="container">
             <h2>خدمات مميزة</h2>
-            <div class="row mt-4">
+            <style>
+                .hover-card {
+                    transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s;
+                }
+                .hover-card:hover {
+                    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+                    transform: translateY(-8px) scale(1.03);
+                    background-color: #f8f9fa;
+                    cursor: pointer;
+                }
+            </style>
+            <div class="row mt-4 g-4">
                 <div class="col-md-4">
-                    <div class="card p-3">
-                        <h5>وزارة الداخلية</h5>
-                        <p>استخراج أوراق رسمية مثل شهادة الميلاد والبطاقة.</p>
+                    <div class="card p-3 shadow-sm hover-card">
+                        <h5 class="text-primary">وزارة الداخلية</h5>
+                        <p class="text-muted">قطاع الاحوال المدنية (<span class="fw-bolder">شهادة الميلاد</span>)</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card p-3">
-                        <h5>وزارة التعليم</h5>
-                        <p>متابعة نتائج الطلاب وتنسيق الجامعات والمدارس.</p>
+                    <div class="card p-3 shadow-sm hover-card">
+                        <h5 class="text-primary">وزارة الداخلية</h5>
+                        <p class="text-muted">قطاع الاحوال المدنية ( <span  class="fw-bolder"> بطاقة الرقم القومي</span> )</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card p-3">
-                        <h5>وزارة الصحة</h5>
-                        <p>حجز مواعيد الكشف الطبي والحصول على الخدمات الصحية.</p>
+                    <div class="card p-3 shadow-sm hover-card">
+                        <h5 class="text-primary">وزارة الصحة</h5>
+                        <p class="text-muted">حجز مواعيد الكشف الطبي والحصول على الخدمات الصحية.</p>
                     </div>
                 </div>
             </div>

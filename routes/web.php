@@ -12,6 +12,9 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
+Route::get('/cert', function () {
+    return view('main.cert');
+})->name('cert');
 
 Route::post('/register', [AuthController::class, 'register']);
 

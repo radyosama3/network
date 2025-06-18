@@ -47,8 +47,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#">وزارة الداخلية</a>
                             <ul class="dropdown-menu dropdown-menu-end text-end">
-                                <li><a class="dropdown-item" href="{{route('cert')}}"> قطاع الامن العام </a></li>
-                                <li><a class="dropdown-item" href="#">قطاع الاحوال المدنيه </a></li>
+                                <li><a class="dropdown-item" href=""> قطاع الامن العام </a></li>
+                                <li><a class="dropdown-item" href="{{route('cert')}}    ">قطاع الاحوال المدنيه </a></li>
                                 <li><a class="dropdown-item" href="#">الاداره العامه للجوازات والهجره </a></li>
                                 <li><a class="dropdown-item" href="#"> الاداره العامه  لنظم المعلومات واجهزه المرور   </a></li>
                             </ul>

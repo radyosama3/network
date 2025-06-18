@@ -57,10 +57,18 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+        $messages = [
+            'email.required' => 'البريد الإلكتروني مطلوب.',
+            'email.email' => 'يرجى إدخال بريد إلكتروني صحيح.',
+            'email.max' => 'البريد الإلكتروني طويل جداً.',
+            'password.required' => 'كلمة المرور مطلوبة.',
+            'password.min' => 'كلمة المرور يجب أن تكون 8 أحرف على الأقل.',
+        ];
+
         $validator = Validator::make($request->all(), [
             'email' => 'required|string|email|max:255',
             'password' => 'required|string|min:8',
-        ]);
+        ], $messages);
 
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
@@ -72,7 +80,7 @@ class AuthController extends Controller
             return redirect()->route('home');
         }
 
-        return back()->withErrors(['email' => 'بيانات الاعتماد غير صحيحة.'])->withInput();
+        return back()->withErrors(['email' => 'بيانات الدخول غير صحيحة.'])->withInput();
     }
 
     public function logout(Request $request)

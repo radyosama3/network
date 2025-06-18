@@ -25,21 +25,23 @@
                     cursor: pointer;
                 }
             </style>
-            <div class="row mt-4 g-4">
+            <div class="row mt-4 g-4 justify-content-center">
                 <div class="col-md-4">
-                    <div class="card p-3 shadow-sm hover-card">
+                    <a href="{{ route('cert') }}" class="text-decoration-none">
+                        <div class="card p-3 shadow-sm hover-card h-100">
+                            <h5 class="text-primary">وزارة الداخلية</h5>
+                            <p class="text-muted">قطاع الاحوال المدنية (<span class="fw-bolder">شهادة الميلاد</span>)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 shadow-sm hover-card h-100">
                         <h5 class="text-primary">وزارة الداخلية</h5>
-                        <p class="text-muted">قطاع الاحوال المدنية (<span class="fw-bolder">شهادة الميلاد</span>)</p>
+                        <p class="text-muted">قطاع الاحوال المدنية ( <span class="fw-bolder"> بطاقة الرقم القومي</span> )</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card p-3 shadow-sm hover-card">
-                        <h5 class="text-primary">وزارة الداخلية</h5>
-                        <p class="text-muted">قطاع الاحوال المدنية ( <span  class="fw-bolder"> بطاقة الرقم القومي</span> )</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-3 shadow-sm hover-card">
+                    <div class="card p-3 shadow-sm hover-card h-100">
                         <h5 class="text-primary">وزارة الصحة</h5>
                         <p class="text-muted">حجز مواعيد الكشف الطبي والحصول على الخدمات الصحية.</p>
                     </div>

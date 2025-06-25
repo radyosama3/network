@@ -102,12 +102,13 @@
     <div class="container mb-4">
         @yield('content')
     </div>
+    {{-- <div style="height: 50px; background: #fff;"></div> --}}
 
-    <footer class="bg-primary text-white text-center py-4">
-        <div class="container">
-            &copy; {{ date('Y') }} البوابة الإلكترونية للوزارات المصرية. جميع الحقوق محفوظة.
+    {{-- <footer class="bg-primary text-white text-center py-3 mt-auto shadow" style="position: sticky; bottom: 0; left: 0; width: 100%; z-index: 1030;">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <span>&copy; {{ date('Y') }} البوابة الإلكترونية للوزارات المصرية. جميع الحقوق محفوظة.</span>
         </div>
-    </footer>
+    </footer> --}}
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

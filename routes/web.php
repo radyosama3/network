@@ -33,3 +33,11 @@ Route::get('/home', function () {
 Route::get('/', function () {
     return redirect()->route('home');
 });
+
+Route::get('/cert_cert', function () {
+    return view('main.formcert');
+})->name('formcert');
+
+Route::get('/cert-cert', function () {
+    return view('main.formid');
+})->name('formid');

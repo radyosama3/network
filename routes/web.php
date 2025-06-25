@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BirthCertificateController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,6 +26,8 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+// certificate serach 
+Route::get('/birth-certificate/search', [BirthCertificateController::class, 'search'])->name('birth-certificate.search');
 
 Route::get('/home', function () {
     return view('welcome');

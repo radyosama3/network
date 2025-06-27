@@ -22,6 +22,7 @@ return new class extends Migration
             $table->enum('gender', ['male', 'female']);
             $table->bigInteger('national_id')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->date('birth_date');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -26,6 +26,8 @@ class User extends Authenticatable
         'file',
         'gender',
         'national_id',
+        'birth_date',
+
     ];
 
     /**

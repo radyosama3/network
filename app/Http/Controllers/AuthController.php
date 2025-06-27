@@ -27,7 +27,9 @@ class AuthController extends Controller
             'address' => 'required|string',
             'file' => 'nullable|file|mimes:jpeg,png,pdf|max:2048',
             'gender' => 'required|in:male,female',
-            'national_id' => 'required|numeric|unique:users',
+            'national_id' => 'required|digits:14|unique:users',
+            'birth_date' => 'required|date|before:today',
+
         ]);
 
         if ($validator->fails()) {
@@ -48,6 +50,8 @@ class AuthController extends Controller
             'file' => $file_path,
             'gender' => $request->gender,
             'national_id' => $request->national_id,
+            'birth_date' => $request->birth_date, 
+
         ]);
 
         Auth::login($user);

@@ -26,8 +26,9 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-// certificate serach 
+// certificate serach
 Route::get('/birth-certificate/search', [BirthCertificateController::class, 'search'])->name('birth-certificate.search');
+Route::get('/nationalId/search', [BirthCertificateController::class, 'searchID'])->name('nationalId.search');
 
 Route::get('/home', function () {
     return view('welcome');

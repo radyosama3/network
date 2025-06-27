@@ -27,7 +27,7 @@
             </style>
             <div class="row mt-4 g-4 justify-content-center">
                 <div class="col-md-4">
-                    <a href="{{ route('cert') }}" class="text-decoration-none">
+                    <a href="{{ route('formcert') }}" class="text-decoration-none">
                         <div class="card p-3 shadow-sm hover-card h-100">
                             <h5 class="text-primary">وزارة الداخلية</h5>
                             <p class="text-muted">قطاع الاحوال المدنية (<span class="fw-bolder">شهادة الميلاد</span>)</p>
@@ -35,10 +35,12 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <div class="card p-3 shadow-sm hover-card h-100">
-                        <h5 class="text-primary">وزارة الداخلية</h5>
-                        <p class="text-muted">قطاع الاحوال المدنية ( <span class="fw-bolder"> بطاقة الرقم القومي</span> )</p>
-                    </div>
+                    <a href="{{ route('formid') }}" class="text-decoration-none">
+                        <div class="card p-3 shadow-sm hover-card h-100">
+                            <h5 class="text-primary">وزارة الداخلية</h5>
+                            <p class="text-muted">قطاع الاحوال المدنية ( <span class="fw-bolder"> بطاقة الرقم القومي</span> )</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-3 shadow-sm hover-card h-100">
